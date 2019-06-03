@@ -1,0 +1,15 @@
+h1 {
+  text-align: left;
+  font-size: 2.27em;
+  font-family: Open Sans, Helvetica, sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+}
+
+body {
+  background-color: #FECFA1;
+}
+
+.sketches, h1 {
+  margin: 40px
+}
