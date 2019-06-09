@@ -1,7 +1,7 @@
-function sketch(p) {
+function pendulum(p) {
 
   const CANVAS_WIDTH = 400
-  const CANVAS_HEIGHT = 400
+  const CANVAS_HEIGHT = 100
   const WORDS = "When a pendulum reaches its lowest point\nit's already halfway back to the top"
   const PERIOD_POSITION = {x: CANVAS_WIDTH - 82, y: 71}
 
@@ -66,4 +66,4 @@ function sketch(p) {
   }
 }
 
-new p5(sketch, 'container');
+new p5(pendulum, 'pendulum');

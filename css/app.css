@@ -6,10 +6,46 @@ h1 {
   letter-spacing: 0.05em;
 }
 
-body {
+body, .equinox-blind, .equinox-blind--lower {
   background-color: #FECFA1;
 }
 
-.sketches, h1 {
-  margin: 40px
+h1 {
+  margin: 40px;
+}
+
+.sketch {
+  position: relative;
+  margin-left: 3em;
+}
+
+.equinox-text {
+  /* border-bottom: 1px solid black; */
+  padding-bottom: 3px;
+}
+
+.equinox-toggle-listener, .equinox-toggle {
+  padding: 3px 6px;
+}
+
+.equinox-toggle {
+  border-left: 1px solid gray;
+}
+
+.equinox-blind, .equinox-blind--lower {
+  padding: 3px 6px;
+  color: transparent;
+}
+
+.equinox-blind--lower {
+  /* border-top: 1px solid black; */
+}
+
+.equinox-blind {
+  /* border-bottom: 1px solid black; */
+}
+
+.equinox-toggle, .equinox-toggle-listener, .equinox-text, .equinox-blind, .equinox-blind--lower {
+  user-select: none;
+  font-size: x-large;
 }
