@@ -16,16 +16,15 @@ h1 {
 
 .sketch {
   position: relative;
-  margin-left: 3em;
+  margin-left: 5em;
 }
 
 .equinox-text {
-  /* border-bottom: 1px solid black; */
-  padding-bottom: 3px;
+  /* padding-bottom: 3px; */
 }
 
 .equinox-toggle-listener, .equinox-toggle {
-  padding: 3px 6px;
+  padding-left: 6px;
 }
 
 .equinox-toggle {
@@ -33,19 +32,19 @@ h1 {
 }
 
 .equinox-blind, .equinox-blind--lower {
-  padding: 3px 6px;
+  /* padding: 3px; */
   color: transparent;
 }
 
-.equinox-blind--lower {
-  /* border-top: 1px solid black; */
-}
-
-.equinox-blind {
-  /* border-bottom: 1px solid black; */
-}
 
 .equinox-toggle, .equinox-toggle-listener, .equinox-text, .equinox-blind, .equinox-blind--lower {
   user-select: none;
   font-size: x-large;
 }
+
+
+@media screen and (max-width: 500px) {
+    .sketch {
+      margin-left: 1.5em;
+    }
+  }
