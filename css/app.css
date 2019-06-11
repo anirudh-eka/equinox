@@ -28,7 +28,7 @@ h1 {
 }
 
 .equinox-toggle {
-  border-left: 1px solid gray;
+  /* border-left: 1px solid gray; */
 }
 
 .equinox-blind, .equinox-blind--lower {
@@ -42,6 +42,37 @@ h1 {
   font-size: x-large;
 }
 
+.arrow-up {
+  margin-left: 8px;
+  border-left: 3px solid gray;
+  border-top: 3px solid gray;
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  transform: rotate(45deg);
+  transition-property: border-top border-left;
+  transition-duration: 0.2s;
+}
+
+.arrow-down {
+  margin-left: 8px;
+  border-left: 3px solid gray;
+  border-top: 3px solid gray;
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  transform: rotate(-135deg);
+  transition-property: border-top border-left;
+  transition-duration: 0.1s;
+}
+
+
+.highlight-tip {
+  border-left: 5px solid #FFFF99;
+  border-top: 5px solid #FFFF99;
+  /* transition-property: border-top border-left;
+  transition-duration: 0.5s; */
+}
 
 @media screen and (max-width: 500px) {
     .sketch {
