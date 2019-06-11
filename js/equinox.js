@@ -9,7 +9,7 @@ let unhighlightTip;
 function equinox(p) {
   p.setup = function() {
     let cnv = p.createCanvas(1, 1);
-    const line1 = p.createDiv("I feel summer where they kissed me last. But I am cautious.").class('equinox-text').position(0,40);
+    const line1 = p.createDiv("Summer lingers where they kissed me last. But I am cautious.").class('equinox-text').position(0,40);
     const line2 = p.createDiv("They are either").class('equinox-text').position(0,170);
     const warmthToggleX = line2.position().x + line2.size().width
     const warmthToggle = p.createDiv('<div class="options"><i class="arrow-up"></i>fire<br/> or <br/>sun<i class="arrow-down"></i></div>').class('equinox-toggle').position(warmthToggleX,line2.position().y)
