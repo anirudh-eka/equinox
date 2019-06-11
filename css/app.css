@@ -59,7 +59,7 @@ h1 {
   display: none;
   height: 6px;
   width: 6px;
-  transform: rotate(-135deg) translate(5px, 5px);
+  transform: translate(10px, 5px) rotate(-135deg);
 }
 
 .highlight-tip {
