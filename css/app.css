@@ -20,15 +20,15 @@ h1 {
 }
 
 .equinox-text {
-  /* padding-bottom: 3px; */
-}
-
-.equinox-toggle-listener, .equinox-toggle {
-  padding-left: 6px;
+  padding-right: 5px;
 }
 
 .equinox-toggle {
-  /* border-left: 1px solid gray; */
+  padding-left: 5px;
+}
+
+.equinox-toggle {
+  border-left: 1px solid gray;
 }
 
 .equinox-blind, .equinox-blind--lower {
@@ -45,32 +45,26 @@ h1 {
 .arrow-up {
   border-left: 1px solid gray;
   border-top: 1px solid gray;
-  display: block;
+  display: none;
+  position: absolute;
   height: 6px;
   width: 6px;
-  transform: rotate(45deg) translate(5px, 5px);
+  transform: translate(10px, -10px) rotate(45deg);
 }
 
 .arrow-down {
   border-left: 1px solid gray;
   border-top: 1px solid gray;
-  display: block;
+  display: none;
   height: 6px;
   width: 6px;
   transform: rotate(-135deg) translate(5px, 5px);
 }
 
-.arrow-stem {
-  display: block;
-  height: 60px;
-  border-left: 1px solid gray;
-  transform: translate(3px);
-}
-
-
 .highlight-tip {
+  display: block;
   border-color: #FFFF99;
-  border-width: 2px;
+  border-width: 1px;
 }
 
 .options, .arrows {

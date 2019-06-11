@@ -8,11 +8,11 @@ let unhighlightTip;
 
 function equinox(p) {
   p.setup = function() {
-    let cnv = p.createCanvas(p.windowWidth, p.windowHeight);
+    let cnv = p.createCanvas(1, 1);
     const line1 = p.createDiv("I feel summer where she kissed me, but I know to be cautious.").class('equinox-text').position(0,40);
     const line2 = p.createDiv("She is either").class('equinox-text').position(0,170);
     const warmthToggleX = line2.position().x + line2.size().width
-    const warmthToggle = p.createDiv('<div class="options">fire<br/> or <br/>sun</div><div class="arrows"><i class="arrow-up"></i><i class="arrow-stem"></i><i class="arrow-down"></i></div>').class('equinox-toggle').position(warmthToggleX,line2.position().y)
+    const warmthToggle = p.createDiv('<div class="options"><i class="arrow-up"></i>fire<br/> or <br/>sun</div>').class('equinox-toggle').position(warmthToggleX,line2.position().y)
     warmthToggle.mousePressed(() => {pressed = true})
     warmthToggle.touchStarted(() => {pressed = true})
     warmthToggle.mouseReleased(() => {pressed = false})
@@ -22,14 +22,12 @@ function equinox(p) {
 
     highlightTip = () => {
       p.select('.arrow-up', warmthToggle).class('arrow-up highlight-tip')
-      p.select('.arrow-stem', warmthToggle).class('arrow-stem highlight-tip')
-      p.select('.arrow-down', warmthToggle).class('arrow-down highlight-tip')
+      warmthToggle.class('equinox-toggle highlight-tip')
     }
 
     unhighlightTip = () => {
       p.select('.arrow-up', warmthToggle).class('arrow-up')
-      p.select('.arrow-stem', warmthToggle).class('arrow-stem')
-      p.select('.arrow-down', warmthToggle).class('arrow-down')
+      warmthToggle.class('equinox-toggle')
     }
 
     const line3 = p.createDiv("Both give this kind of warmth").class('equinox-text').position(0,300);
@@ -38,8 +36,8 @@ function equinox(p) {
     const warmthToggleListener = p.createDiv('devours the forest <br/> feeds it').class('equinox-toggle-listener').position(warmthToggleListenerX,line4.position().y)
     const heightOfOneLine = warmthToggleListener.size().height * (1/2)
     respondToWarmthToggle = toggleListener(warmthToggleListener, line4.position().y, line4.position().y - heightOfOneLine)
-    const blind1 = p.createDiv("But one devours the forest").class('equinox-blind').position(0,line4.position().y - heightOfOneLine + 5 );
-    const blind2 = p.createDiv("But one devours the forest").class('equinox-blind--lower').position(0,460);
+    const blind1 = p.createDiv("But one devours the forest ya").class('equinox-blind').position(0,line4.position().y - heightOfOneLine + 3 );
+    const blind2 = p.createDiv("But one devours the forest ya ").class('equinox-blind--lower').position(0,460);
 
     toggleListeners = compose([toggleListener1, respondToWarmthToggle])
     toggleListeners(1)
