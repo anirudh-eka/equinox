@@ -31,9 +31,9 @@ function equinox(p) {
     }
 
     const line3 = p.createDiv("Both give this kind of warmth").class('equinox-text').position(0,300);
-    const line4 = p.createDiv("But one").class('equinox-text').position(0,430);
+    const line4 = p.createDiv("").class('equinox-text').position(0,430);
     const warmthToggleListenerX = line4.position().x + line4.size().width
-    const warmthToggleListener = p.createDiv('devours the forest <br/> feeds it').class('equinox-toggle-listener').position(warmthToggleListenerX,line4.position().y)
+    const warmthToggleListener = p.createDiv('But one devours the forest <br/> While the other feeds it').class('equinox-toggle-listener').position(warmthToggleListenerX,line4.position().y)
     const heightOfOneLine = warmthToggleListener.size().height * (1/2)
     respondToWarmthToggle = toggleListener(warmthToggleListener, line4.position().y, line4.position().y - heightOfOneLine)
     const blind1 = p.createDiv("But one devours the forest ya").class('equinox-blind').position(0,line4.position().y - heightOfOneLine + 3 );
@@ -44,10 +44,8 @@ function equinox(p) {
   }
 
   p.draw = function() {
-    if(pressed) {
-      dragWarmthToggle()
-        .map(newYasRate => toggleListeners(newYasRate))
-    }
+    dragWarmthToggle(pressed)
+      .map(newYasRate => toggleListeners(newYasRate))
   }
 
   p.mouseReleased = () => {
@@ -62,7 +60,7 @@ function equinox(p) {
 
   function dragY(elem, upperBound, lowerBound) {
     let lastMouseY = Nothing();
-    return function() {
+    return function(pressed) {
       const newYPositionAsRate = lastMouseY.map(y => {
         const pixelShift = p.mouseY - y
         let newY = elem.y + pixelShift
@@ -70,7 +68,8 @@ function equinox(p) {
         newY = newY < lowerBound  ? lowerBound : newY
         return (newY - lowerBound) / (upperBound - lowerBound)
       })
-      lastMouseY = Just(p.mouseY)
+
+      pressed ? lastMouseY = Just(p.mouseY) : lastMouseY = Nothing()
       return newYPositionAsRate
     }
   }

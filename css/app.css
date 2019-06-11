@@ -8,6 +8,7 @@ h1 {
 
 body, .equinox-blind, .equinox-blind--lower {
   background-color: #FECFA1;
+  overflow-y: hidden;
 }
 
 h1 {
