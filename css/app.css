@@ -43,35 +43,44 @@ h1 {
 }
 
 .arrow-up {
-  margin-left: 8px;
-  border-left: 3px solid gray;
-  border-top: 3px solid gray;
-  display: inline-block;
-  height: 10px;
-  width: 10px;
-  transform: rotate(45deg);
-  transition-property: border-top border-left;
-  transition-duration: 0.2s;
+  border-left: 1px solid gray;
+  border-top: 1px solid gray;
+  display: block;
+  height: 6px;
+  width: 6px;
+  transform: rotate(45deg) translate(5px, 5px);
 }
 
 .arrow-down {
-  margin-left: 8px;
-  border-left: 3px solid gray;
-  border-top: 3px solid gray;
-  display: inline-block;
-  height: 10px;
-  width: 10px;
-  transform: rotate(-135deg);
-  transition-property: border-top border-left;
-  transition-duration: 0.1s;
+  border-left: 1px solid gray;
+  border-top: 1px solid gray;
+  display: block;
+  height: 6px;
+  width: 6px;
+  transform: rotate(-135deg) translate(5px, 5px);
+}
+
+.arrow-stem {
+  display: block;
+  height: 60px;
+  border-left: 1px solid gray;
+  transform: translate(3px);
 }
 
 
 .highlight-tip {
-  border-left: 5px solid #FFFF99;
-  border-top: 5px solid #FFFF99;
-  /* transition-property: border-top border-left;
-  transition-duration: 0.5s; */
+  border-color: #FFFF99;
+  border-width: 2px;
+}
+
+.options, .arrows {
+  display: inline-block;
+}
+
+.arrows {
+  display: inline-block;
+  vertical-align: bottom;
+  margin-left: 15px;
 }
 
 @media screen and (max-width: 500px) {

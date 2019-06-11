@@ -12,7 +12,7 @@ function equinox(p) {
     const line1 = p.createDiv("I feel summer where she kissed me, but I know to be cautious.").class('equinox-text').position(0,40);
     const line2 = p.createDiv("She is either").class('equinox-text').position(0,170);
     const warmthToggleX = line2.position().x + line2.size().width
-    const warmthToggle = p.createDiv('<div class="options">fire <i class="arrow-up"></i><br/> or <br/>sun <i class="arrow-down"></i></div>').class('equinox-toggle').position(warmthToggleX,line2.position().y)
+    const warmthToggle = p.createDiv('<div class="options">fire<br/> or <br/>sun</div><div class="arrows"><i class="arrow-up"></i><i class="arrow-stem"></i><i class="arrow-down"></i></div>').class('equinox-toggle').position(warmthToggleX,line2.position().y)
     warmthToggle.mousePressed(() => {pressed = true})
     warmthToggle.touchStarted(() => {pressed = true})
     warmthToggle.mouseReleased(() => {pressed = false})
@@ -22,14 +22,16 @@ function equinox(p) {
 
     highlightTip = () => {
       p.select('.arrow-up', warmthToggle).class('arrow-up highlight-tip')
+      p.select('.arrow-stem', warmthToggle).class('arrow-stem highlight-tip')
       p.select('.arrow-down', warmthToggle).class('arrow-down highlight-tip')
     }
 
     unhighlightTip = () => {
       p.select('.arrow-up', warmthToggle).class('arrow-up')
+      p.select('.arrow-stem', warmthToggle).class('arrow-stem')
       p.select('.arrow-down', warmthToggle).class('arrow-down')
     }
-    
+
     const line3 = p.createDiv("Both give this kind of warmth").class('equinox-text').position(0,300);
     const line4 = p.createDiv("But one").class('equinox-text').position(0,430);
     const warmthToggleListenerX = line4.position().x + line4.size().width
