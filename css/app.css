@@ -9,6 +9,8 @@ h1 {
 body, .equinox-blind, .equinox-blind--lower {
   background-color: #FECFA1;
   overflow-y: hidden;
+  font-family: Open Sans, Helvetica, sans-serif;
+  font-weight: 300;
 }
 
 h1 {
